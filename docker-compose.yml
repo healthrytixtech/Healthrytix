@@ -1,0 +1,11 @@
+services:
+  healthrytix-web:
+    build: .
+    container_name: healthrytix-web
+    restart: unless-stopped
+    networks:
+      - n8n-stack_default
+
+networks:
+  n8n-stack_default:
+    external: true
